@@ -7,20 +7,6 @@ let args= minimist(process.argv);
 
 let configJson= fs.readFileSync(args.package,"utf-8");
 let config= JSON.parse(configJson);
-{
-// let browserlaunchkapromise = puppeteer.launch({headless :false});
-// browserlaunchkapromise.then(function(browser){
-//     let pagekapromise = broser.pages();
-//     pageskapromise.then(function(){
-//         let pageopenkapromise.then(function(){
-//             let browsercloasekapromise = browser.close();
-//             browsercloasekapromise.then(function(){
-//                 console.l
-//             })
-//         })
-//     })
-// })
-}
 async function run(){
     let browser = await puppeteer.launch({
         headless: false,
